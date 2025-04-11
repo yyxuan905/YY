@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch with Cute Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <style>
+      /* 子選單樣式 */
+      .submenu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        background-color: #ffcccb;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      /* 顯示子選單時的動畫 */
+      .dropdown:hover .submenu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 可愛選單 -->
+    <ul class="menu">
+      <li><a href="#">首頁</a></li>
+      <li><a href="#">自我介紹</a></li>
+      <li class="dropdown">
+        <a href="#">作品集</a>
+        <ul class="submenu">
+          <li><a href="https://www.et.tku.edu.tw/Front/test1/Page.aspx?id=%2FMpQlj6Farg=" target="_blank">1 週</a></li>
+          <li><a href="https://www.et.tku.edu.tw/Front/CourseIntroduction/CourseVideo/Page.aspx?id=nczTcFIYBNg=" target="_blank">2 週</a></li>
+          <li><a href="https://www.et.tku.edu.tw//Front/Download/ET-classroom/Page.aspx?id=c%2BF93j2hZ7c=" target="_blank">3 週</a></li>
+          <li><a href="#">4 週</a></li>
+        </ul>
+      </li>
+      <li><a href="#">測驗卷</a></li>
+      <li><a href="#">教學影片</a></li>
+    </ul>
+
+    <!-- 畫布 -->
+    <script src="sketch.js"></script>
+  </body>
+</html>
